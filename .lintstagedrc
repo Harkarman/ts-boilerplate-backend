@@ -1,0 +1,9 @@
+# .lintstagedrc
+
+{
+  "*.ts": [
+    "eslint",
+    "prettier --write"
+  ]
+}
+
