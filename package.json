@@ -7,7 +7,8 @@
         "format": "prettier . --write",
         "lint": "eslint . --fix",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "ts-node-dev --respawn --pretty --transpile-only src/index.ts"
+        "start": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
+        "prepare": "husky install"
     },
     "keywords": [
         "typescript",
@@ -32,8 +33,16 @@
         "@typescript-eslint/eslint-plugin": "^5.18.0",
         "@typescript-eslint/parser": "^5.18.0",
         "eslint": "^8.12.0",
+        "eslint-config-prettier": "^8.5.0",
+        "husky": "^7.0.0",
+        "lint-staged": "^12.3.7",
         "prettier": "^2.6.2",
         "ts-node-dev": "^1.1.8",
         "typescript": "^4.4.4"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
     }
 }
