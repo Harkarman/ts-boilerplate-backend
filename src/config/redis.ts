@@ -8,6 +8,7 @@ redisClient
     })
     .on('error', (error) => {
         console.log('Redis not connected', error.message);
+        process.exit(1);
     });
 
 // v4 does not auto-reconnect on createClient().
